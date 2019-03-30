@@ -33,8 +33,8 @@ def check_command_line_arguments(in_arg):
         print("* Doesn't Check the Command Line Arguments because 'get_input_args' hasn't been defined.")
     else:
         # prints command line agrs
-        print("Command Line Arguments:\n     dir =", in_arg.dir, 
-              "\n    arch =", in_arg.arch, "\n dogfile =", in_arg.dogfile)
+        print("Command Line Arguments:\n     dir =", in_arg.dir)
+              # "\n    arch =", in_arg.arch, "\n dogfile =", in_arg.dogfile)
 
 def check_creating_pet_image_labels(results_dic):
     """    For Lab: Classifying Images - 9/10. Creating Pet Image Labels
