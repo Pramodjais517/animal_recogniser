@@ -43,8 +43,10 @@ def get_input_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dir', type=str, default='pet_images/',
                         help='path to folder of images')
-    in_args = parser.parse_args()
 
+    parser.add_argument('--arch', default='vgg' )
+    parser.add_argument('--dogfile', default='dognames.txt' )
+    in_args = parser.parse_args()
 # Accesses values of Argument 1 by printing it
 
     return in_args
