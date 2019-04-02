@@ -41,7 +41,6 @@ from print_results import print_results
 def main():
     # TODO 0: Measures total program runtime by collecting start time
     start_time = time()
-    sleep(12)
     # TODO 1: Define get_input_args function within the file get_input_args.py
     # This function retrieves 3 Command Line Arugments from user as input from
     # the user running the program from a terminal window. This function returns
@@ -88,7 +87,7 @@ def main():
     # Adjusts the results dictionary to determine if classifier correctly 
     # classified images as 'a dog' or 'not a dog'. This demonstrates if 
     # model can correctly classify dog images as dogs (regardless of breed)
-    adjust_results4_isadog(results, None)
+    adjust_results4_isadog(results, in_arg.dogfile)
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
     check_classifying_labels_as_dogs(results)

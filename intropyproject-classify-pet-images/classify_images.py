@@ -68,11 +68,11 @@ def classify_images(images_dir,results_dic,model):
     path="pet_images/"
     for key in results_dic:
         model_label = classifier(path+key, model)
-        model_label.lower()
         model_label.strip()
+        breed = model_label.lower()
         truth = results_dic[key][0]
-        if truth in model_label:
-            results_dic[key].extend([model_label,1])
+        if truth in breed:
+            results_dic[key].extend([breed,1])
         else:
-            results_dic[key].extend([model_label,0])
+            results_dic[key].extend([breed,0])
     None
