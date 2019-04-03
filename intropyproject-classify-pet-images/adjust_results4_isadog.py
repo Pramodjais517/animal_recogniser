@@ -75,10 +75,11 @@ def adjust_results4_isadog(results_dic, dogfile):
     # Processes each line in file until reaching EOF (end-of-file) by
     # processing line and adding dognames to dognames_dic with while loop
         while line != "":
-            line.strip()
             if line not in dognames_dict:
-                words=line.split(',')
-                dognames_dict.extend(words)
+                words = line.split(',')
+                for element in words:
+                    breed =element.strip()
+                    dognames_dict.append(breed)
             line = infile.readline()
         for key in results_dic:
 
